@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #3f37c9;
+}
+
+.navigation {
+    background-color: #560bad;
+    color: white;
+    margin-top: 0;
+    height: 50px;
+}
+
+.navigation h1{
+    margin: 0;
+    margin-left: 50px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+
+.navigation ul{
+    margin-top: 0;
+    text-align: right;
+    list-style: none;
+    height: 50px;
+}
+
+.navigation li{
+    display: inline-block;
+    padding-right: 50px;
+    line-height: 50px;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.profile div{
+    display: inline-block;
+}
+
+.profilePic {
+    width:40% ;
+    text-align: center;
+}
+
+.profilePic img {
+    width: 400px;
+    border-radius: 400px;
+}
+
+.profileName {
+    margin-top: 125px;
+    text-align: left;
+    vertical-align: top;
+    width: 59%;
+}
+
+.content {
+    width: 100%;
+    margin-left: 150px;
+}
