@@ -235,6 +235,11 @@ body hr{
     100% {transform: translate(0,0);}
 }
 
+@keyframes menuJSLoad{
+    0% {transform: translate(0,-75%)}
+    100% {transform: translate(0,0);}
+}
+
 @media (max-width: 1000px){
 
 .navigation ul{
@@ -294,7 +299,8 @@ body hr{
 
 .menuJS{
     height: auto;
-    animation: none;
+    animation-name: menuJSLoad;
+    animation-duration: 0.5;
 }
 
 .menuJS ul{
