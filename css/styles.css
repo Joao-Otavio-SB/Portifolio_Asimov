@@ -1,18 +1,35 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #3f37c9;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #6544e9;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body hr{
+    margin: 0;
+    width: 80%;
 }
 
 .navigation {
-    background-color: #560bad;
+    background-color: #30206f;
     color: white;
     margin-top: 0;
     height: 50px;
+    animation-name: navigationLoad;
+    animation-duration: 1s;
+}
+
+.navigation li.threelineIcon{
+    display: none;
 }
 
 .navigation h1{
     margin: 0;
+    font-weight: 100;
     margin-left: 50px;
     height: 50px;
     line-height: 50px;
@@ -27,24 +44,41 @@ html, body {
 }
 
 .navigation li{
+    text-align: center;
     display: inline-block;
-    padding-right: 50px;
-    line-height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 50px;  
+    transition: 0.3s;  
+}
+
+.navigation li:hover{
+    background-color: #38096e;
+    transition: 0.3s;
+}
+
+.navigation a{
+    color: white;
+    text-decoration: none;
 }
 
 .profile {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: 150px;
 }
 
 .profile div{
     display: inline-block;
+    font-family: 'Anton', sans-serif;
 }
 
 .profilePic {
     width:40% ;
     text-align: center;
+    animation-name: profilePic;
+    animation-duration: 1s;
 }
 
 .profilePic img {
@@ -53,13 +87,227 @@ html, body {
 }
 
 .profileName {
+    font-size: 24px;
+    color:black;
     margin-top: 125px;
     text-align: left;
     vertical-align: top;
     width: 59%;
+    animation-name: profileName;
+    animation-duration: 2s;
+}
+
+.profileName h1{
+    margin-bottom: 0;
+}
+
+.profileName h2{
+    margin-top: 0;
+}
+
+.caminho{
+    padding-left: 0;
+    margin: 0;
+}
+
+.caminho li{
+    display: inline-block;
+}
+
+.dados{
+    color: white;
+    width: 100%;
+    text-align: justify;
+    margin-left: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    animation-name: dadosLoad;
+    animation-duration: 2s;
 }
 
 .content {
+    color: white;
     width: 100%;
     margin-left: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    animation-name: contentLoad;
+    animation-duration: 2s;
+}
+
+.content h3{
+    margin-left: 50px;
+}
+
+.content p{
+    margin-left: 50px;
+}
+
+.content a{
+    color: white;
+}
+
+.miniatura{
+    width: 256px;
+    height: 256px;
+    margin-right: 50px;
+    margin-top: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+}
+
+.miniatura:hover{
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+    margin: 0;
+    transition: 0.5s;
+}
+
+.miniaturaInfo h3{
+    margin: 0;
+    margin-top: 50px;
+    font-size: 16px;
+    color: white;
+    vertical-align: center;
+}
+
+.miniaturaInfo{
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.miniaturaInfo:hover{
+    opacity: 100%;
+    transition: 1s;
+}
+
+.socialIcons{
+    margin-left: 50px;
+}
+
+.socialIcons img{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.bakamitai{
+    display: inline-block;
+}
+
+.bakamitai video{
+    height: 256px;
+    width: 256px;
+}
+
+@keyframes profilePic{
+    0% {opacity: 0;transform: translate(-50px,0px)}
+    100% {opacity: 100;transform: translate(0px,0px)}
+}
+
+@keyframes profileName{
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+@keyframes dadosLoad{
+    0% {transform: translate(100%,0);}
+    100% {transform: translate(0,0);}
+}
+
+@keyframes contentLoad{
+    0% {opacity: 0;}
+    25% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+@keyframes navigationLoad{
+    0% {transform: translate(0,-50px)}
+    50% {transform: translate(0,-50px)}
+    100% {transform: translate(0,0);}
+}
+
+@media (max-width: 1000px){
+
+.navigation ul{
+    text-align: center;
+}
+
+.navigation li{
+    display: none;
+}
+
+.navigation h1{
+    display: none;
+}
+
+.navigation li.threelineIcon{
+    display: inline-block;
+}
+
+.profile{
+    margin: 0;
+}
+
+.profile div{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.profilePic{
+    margin: 0;
+    margin-top: 25px;
+}
+
+.profilePic img{
+    text-align: center;
+    max-width: 70%;
+}
+
+.profileName{
+    margin: 0;
+    text-align: center;
+}
+
+.dados{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    max-width: 80%;
+}
+
+.content{
+    margin-top: 25px;
+    margin-left: 75px;
+    max-width: 80%;
+    text-align: justify;
+}
+
+.menuJS{
+    height: auto;
+    animation: none;
+}
+
+.menuJS ul{
+    height: auto;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.menuJS li{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0;;
+}
+
 }

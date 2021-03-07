@@ -5,25 +5,50 @@
     <head>
         <meta charset="utf-8">
         <title>Contato</title>
-        <link rel="stylesheet" href="../css/styles.css">
+        <link href="../css/styles.css" rel="stylesheet" >
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="../js/script.js"></script>
     </head>
 
     <body>
 
-        <div class="navigation">
+        <div id="navigation" class="navigation">
 
-            <h1>Portfólio sério</h1>
+            <h1>Quase um Portfólio</h1>
 
             <ul>
-                <li>Home</li>
-                <li>Hobbies</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>          
                 <li>Contato</li>
+                <li><a href="extra.html">Extra</a></li>
+                <li id="threelineIcon" class="threelineIcon" onclick="open()">&#x2630;</li>
             </ul>
 
         </div>
+
+        <div class="content">
+
+            <ul class="caminho">
+                <li><a href="index.html">Home</a></li>
+                <li>> Contato</li>
+            </ul>
+
+            <h1>Contato</h1>
+
+                <h2>Telefone</h2>
+                    <p>(12) 98889-6930</p>
+                <h2>E-mail</h2>
+                    <p>joogui2010@hotmail.com</p>
+                <h2>Redes Sociais</h2>
+
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/joaootavio.silvabarros/" target="_blank"><img src="../img/facebook.png" alt="Link para o Facebook"></a>
+                <a href="https://www.instagram.com/_joaotavio_/" target="_blank"><img src="../img/Instagram.png" alt="Link para o Instagram"></a>
+                <a href="https://twitter.com/XwhovianX/" target="_blank"><img src="../img/twitter.png" alt="Link para o Twitter"></a>
+            </div>
+
+        </div>
         
-
     </body>
-
 
 </html>
